@@ -1,0 +1,561 @@
+x\documentclass[final, dvipsnames, authoryear,12pt]{elsarticle}
+\setcounter{page}{0} \renewcommand{\baselinestretch}{1.0}
+\usepackage[utf8]{inputenc}
+\usepackage{subfiles}
+\usepackage{todonotes}
+\usepackage[left=3cm, right=3cm, top=3cm]{geometry} 
+
+\usepackage{epsfig,amssymb,calc,float,longtable,natbib,rotating,url, grffile, supertabular}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\usepackage{color}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage{blindtext}
+\usepackage{mathtools}
+\usepackage{mdframed}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumerate}
+\usepackage{hyphenat}
+%\usepackage[english]{babel}
+\usepackage{colortbl}
+\usepackage[magyar]{babel}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{multicol}
+
+\usepackage{changepage}
+
+%font types
+\usepackage{tgcursor}
+\usepackage{courier}
+
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{threeparttable}
+\usepackage{lscape}
+
+\usepackage{bigstrut}
+\usepackage{filecontents}
+\usepackage{hhline}
+
+ \usepackage{t1enc} 
+
+
+\begin{document}
+
+
+\begin{frontmatter}
+\title{Global Value Chains localisation and firms competitiveness: Case studies on selected EU countries}
+
+
+
+
+
+
+\author[gb]{G\'{a}bor B\'{e}k\'{e}s}
+\author[mk]{Miklós Koren}
+\author[bm]{Balázs Muraközy\corref{cor1}}
+\author[at]{Álmos Telegdy}
+ \address[gb]{Central European University, Institute of Economics and CEPR}
+ \address[mk]{Central European University, Institute of Economics and CEPR}
+ \address[bm]{University of Liverpool, Institute of Economics }
+ \address[at]{National Bank of Hungary}
+ 
+ 
+\cortext[cor1]{Corresponding author: Balazs Murakozy, xxxx } 
+
+\cortext[cor2]{The authors gratefully }
+
+
+
+\begin{abstract}
+    Global....
+\end{abstract}
+
+
+\end{frontmatter}
+%\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The new wave of globalization emerging in the 1990s brought about the formation of Global Value Chains (GVCs). These are companies linked by ownership and trade connections and are among the most important production structures of the global economy. The scale and importance of GVCs has multipled during the last 3 decades.\footnote{\cite{mckinsey2019gvc}, for example, identify 23 GVCs and find that they account for 69 percent of global output and 96 percent of international trade.} Linking their countries' companies to GVCs is also high on the agenda of governments, as the integration into the production chains is among the most effective ways of improving competitiveness of firms and countries and may also foster productivity and innovation.
+
+Despite their importance and the attempts of governments to integrate the national small and medium sized enterprises (SMEs) into global value chains, we know surprisingly little of them and the reason for the relatively small amount of research research of this important topic is lack of data. The typical empirical paper used industry-level measures to identify the trade between various countries' industries. More recently, papers started using firm-level information from administrative sources as well as survey data (in Section \ref{sec: approach} we discuss the advantages and disadvantages of various data types).
+
+This paper is mainly a methodological paper, which describes our attempts to collect both quantitative and qualitative information about supplier-buyer relationships in a multi-country setting (Hungary, Romania and Slovakia). After describing our approach, we discuss the issues that arose during the data collection process regarding data cleaning. In addition, we present a number of descriptive results about the structure of buyer/supplier portfolios of the firm, and how these are related to firm performance.
+
+in terms of methodology: 
+Presents a new approach which builds on a large scale survey linked to administrative data
+Describes data collection and data handling in detail
+Describes the issues such an exercise raises
+
+In terms of substance
+Describes key patterns in the data
+Number, share etc of relationships
+Geography of relationships
+How relationships form
+How the structure of relationships is associated with performance?
+Can we identify high-value/key relationships from the data?
+
+
+
+Administrative firm-to-firm data, such as VAT data, is scarce, and even if available, it is restricted to the amount of trade between firms, and do not provide much information on how the relationships develop and operate.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Approaches to understand GVCs and supplier-buyer relationships} 
+\label{sec: approach}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Existing approaches and results}
+
+% todo miklos: add more literature?
+
+To understand the importance of GVCs and their effect on countries, early research relied on industry-level input-output tables, constructed with international trade data (e.g., \cite{johnson2012accounting, hummels2001nature}. The main purpose of the use of such data were to (1) measure flows of trade between industries and countries and (2) compute the share of value added in gross exports, but they were also used to understand the propagation and amplification of small shocks in the economy (\cite{acemoglu2016networks}. While papers based on aggregate data documented that intermediate inputs played an ever increasing role in international trade since the 1970s which increased abruptly in the last decade of the 20\textsuperscript{th} century and also ranked countries by their value added in manufacturing goods, they have certain limitations that can be overcome only by using microdata.\footnote{For potential points of contact between the input-output and micro data approach as well as a concise treatment of the input-output approach, see \cite{johnson2018measuring}.} For example, the heterogeneity of firms by the number and other characteristics of business linkages cannot be studied without firm-level data. Interesting attributes of linkages are the number of upstream and downstream connections, the length of the relation, the tye of firms connected to and so on. In addition, as input-output tables are typically based on import and export data, firm-level information is necessary to study intra-country firm connections, which is crucial for understanding wich SMEs are able to connect to GVCs or large national enterprises.
+
+Besides the vast literature on international trade that uses firm-level information, \footnote{ADD REFS}, oly a handful of studies are based on data that have business linkages to assess their effects on firm behavior. Two types of such data exist, those of administrative origin and surveys. \footnote{A common feature of all these data are that information on linkages and on firm performance (in form of balance sheet and income statement) are from different sources, and the performance data usually is of administrative origin.} In the following paragraphs, we briefly present the main interest and the data of each paper to serve as comparison with our survey data and purpose of research.
+
+Administrative data were used in the following papers. \cite{atalay2014vertical}, who study the reasons for vertical integration of US firms with the use two datasets: the Economic Census which is an establishement-level data executed every 5 years and the Commodity Flow Survey providing information on shipments between firms. These data are from 1993 (110 thousand establishments) and 1997 (60 thousand establishments). Shipments are recorded only if the buyer is a major partner of the supplier firm, defined as having at least 10 percent share in revenue.  \cite{bernard2019production} build a model of outsourcing and test it on a Japanese database that has information on the buyer-supplier relationships of almost the whole Japanese private sector (800 thousand firms). The last administrative dataset is described in \cite{dhyne2015belgian} and covers Belgian companies (about 400 thousand firms). In addition to its great coverage, the data also follows firms in time (for 11 years). These data were used in two papers, one studying the effects of international trade on firms costs (\cite{tintelnot2018trade}) and the other the sources of firm size heterogeneity (\cite{bernard2019production}).
+
+We found two papers which use survey data on firm linkages. The first is \cite{minetti2018financial} and connects the effects of financial constraints on participation in local and global supply chains. The data are from about 7,500 Italian firms and have rich information on many aspects of firm behavior: the financial structure of the firm, incluing banking relationships, outsourcing, participation in supply chains and the propensity to innovate. The second paper is \cite{newman2018linked} and uses data on 102 multinational enterprises and 226 domestically-owned firms from 5 African and 2 South Asian countries. The objective of this study is the measurement of knowledge spillovers of Foreign Direct Investment (FDI). In addition to the usual set of variables, the data have information on the ownership structure and R&D activity.
+
+Quite naturally, the main advantage of administrative data is the sheer size of the sample. As shown above, they usually cover most firms in an economy, if not the whole population. The large sample size sometimes is combined with information from multiple years, forming thus a panel. The information available, nonetheless, is rather limited and it is usually restricted to the existence of the trade link and the value exchanged. Survey data have much smaller coverage (a few hundred or several thousand firms) but they contain information on a special feature of the relationship or on firm behavior that is not present in the large datasets.
+
+The particular interest of our survey, as will be discussed below, concerns the relation between buyers and suppliers. To shed light on this issue, we asked questions to understand the formation and quality of business ties between firms. According to our knowledge, no other dataset has such information on business linkages. The closest to this question is perhaps the literature on how property rights shape the boundaries of the firm: which transactions take place within the boundaries of the (vertically integrated) firm and which on the market.\footnote{The theoretical and empirical aspects of this literature are summarized by \cite{antras2013grossman}}. Instead of firm boundaries, our survey focuses on market transactions and provide empirical evidence on their types and their effects on firm behavior.
+
+Before describing the survey, it is useful to present the types of supplier-buyer relationship. \cite{gereffi2005governance} provide a typology of global value chains, which nevertheless can be applied to any type of supplier-buyer relation. The authors identify four types of trade relations between firms.\footnote{The 5\textsuperscript{th} relation is that of vertical intergration, but we are interested in market transactions.}
+
+\begin{itemize}
+    \item \emph{Market partners.} The commodity is simple and so does not require any specific investment. Both the supplier and the buyer have many alternative partners. The cost of switching to a new partner is low for both the supplier and the buyer.
+    \item \emph{Modular partners.} The commodity is complex and so it requires exchange of information between the two parties. The supplier can use general purpose assets for the production and thus does not need the intervention of the buyer.
+    \item \emph{Relational partners}. The exchanged good is such that relationship-specific equipment is necessary to produce it efficiently, but both parties have a vested interest to maintain the relation (either because it would be hard to replace the partner, or due to some institutional arrangement, such as family ties between companies or some other reason for long-lasting relationship). Thus, none of the parties will hold up the other.\footnote{The hold up problem originates from the opportunistic behavior of some party in a relation (\cite{williamson2007economic}) and was introduced by \cite{grossman1986costs}. It consists of the expropriation of the other's investment value in a relationship which requires that one party invests such that the investment loses its value outside the relation.}
+    \item \emph{Captive partners.} In this relation not only relationship-specific investment is necessary, but one of the parties is able to extract part of the value of this investment. The reason for this can be, for example, the sheer size difference of the parties. For example, small local suppliers can be completely dependent on large international buyers and thus have not much bargaining power in the relation.
+\end{itemize}
+
+    As can be seen from the typology, the relation between two firms may lie between a simple market relation and a strong bound of interdependency. The type of the relation is shaped preeminently by the specificity of the product exchanged. Even if it of crucial importance in the final product, to obtain an intermediate good that is simple, does not require the development of a special relationship with its producer as it can be simply procured from the market.\footnote{Note that if the timing of the arrival of the product is crucial even a simple intermediate good may become specific.} The supplier-buyer relation with exchange of specific intermediate goods will depend on two factors: whether there is need for a specific investment to produce the good and whether there are multiple buyers or suppliers of the good (so how competitive the market is). If there in no need for a relation-specific investment, the relation will be modular and only information will be exchanged between the parties. If the relation involves asset specificity but both the supplier and the buyer are the only ones who produce and need the product, the relationship will be relational.\footnote{This is similar to firm-specific human capital of workers. If a worker has to develop skills that are costly and she cannot use in other firms, the cost of this human capital investment should be shared between the employer and the employee so both have a vested interest in maintaning the employment relation (\cite{becker1962investment}.} At the opposite end from market transaction of the relational spectrum lies the situation when the supplier has to make a relationship-specific investment but the buyer has the opportunity to replace the supplier (for example, the buyer is a large multinational and the supplier a small domestic firm).  
+    
+    In the following we present our survey methdology and discuss that specific questions that meant to extract information from the firms for the purpose to study the type of market transaction.
+  
+\subsection{Our aim and approach}
+
+Based on this literature we found that relatively little is known about how linkages form between firms. Our aim was to design a method which would inform us the most. Besed on the litarature our main insights were:
+\begin{itemize}
+    \item Even basic information on these linkages is missing. It is of interest to collect such data (counting buyers, suppliers etc)
+    \item However, such basic data is provides only a limited amount on information on how relationships form an operate. While it would be of interest to collect such information for each partner, this is impossible given the constraints of survey design. Therefore we opted to ask such information on a set of top partners
+    \item Given the constraints, it is important to have a focus for the latter task. Based on the literature, one of the focuses is innovation (...) and the other is power relations within the relationship (...)    
+    \item The literature suggests that both firm fundamentals (productivity, size, etc) and strategic choices matter. Because of this quantitaive data on links and administrative balance sheet data strongly complement each other
+    \item This is also true if we would like to measure the effect of having different types of relationships on firm performance
+
+%%%Elaborate a bit on what we learned from the literature and how we relate to it    
+    
+\end{itemize}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ Survey}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{How it started}
+
+% todo gabor. 
+
+\begin{itemize}
+    \item Idea
+    \item Team: background, experience with firm data, surveys, microdata management
+    \item Choosing GFK as partner
+\end{itemize}{}
+
+
+\subsection{Formulating the survey }
+
+As Bloom, Lemons, Sadun, Scur and Van Reenen (2014) highlight although more and well detailed administrative datasets are available about companies, some concepts and organizational practices are still badly measured. One of them is the way firms form and maintain relationships. This topic is rarely analyzed with empirical techniques, however can provide important insights about productivity differences. Our survey focuses on supplier-buyer relations and analyzes how these choices influence the firms’ development.
+
+The first sketch of the questionnaire was the outcome of a brainstorming between the researchers and contained all possible topics that can be included. Some of these questions were original and a part of them was imported from already existing surveys. (e.g. from the EU standard Community Innovation Survey). It was clear from the beginning that the survey should be formulated in a way to maximize response rate. Therefore we discussed the methods and topics covered with colleagues from Gfk and also with industry participants.
+
+Following the Gfk’s instructions it was essential, that as the time of managers is quite valuable the questionnaire should last no longer than 45 minutes. In our case it meant that the questionnaire must had been significantly cut. The other important feedback we received reflected on the methodology. We decided to restrict the number of open ended questions and mainly included multiple choice or close ended (yes or no) questions. Later we included one important exception: it turned out that asking the managers to briefly describe their firms contains many useful information that helps to understand the context of the answers. These small bits of information captures the reasons behind altering answers. For example big changes can be explained by opening to foreign markets or the structure of partnerships can be better understood by knowing that the firm only buys from and produces to its parent company.
+
+\subsection{Selecting information to collect}
+
+However there remained many tricky questions. An important aspect of the survey was to discover the criteria system firms use when selecting their potential partners. We listed some possible options (price, flexibility, reliability, quality of the products etc.) and according to our first experiences they marked all of them. The interviewed managers considered each of them an important aspect, and the way we formulated the question did not help to put them in order of importance.  Therefore we started to experiment with different methods to identify the most important characteristics. We asked the firms to rank them or to compare to other options on the market to find the best methodology.
+
+Firstly we wanted to identify as many suppliers and buyers as possible and also collect details about them (basic information such as location, ownership, products sold and also relationship specific information such as the length of cooperation, the first steps in establishing relationship, assistance received from the partner). It quickly turned out that it is too demanding and a reasonable cutoff was figured out to balance between the quality and the amount of information asked for. We decided to ask details only about the partners that have a higher share in sales/material costs than 10\% or the three most important one. This definition works very well and firms could easily identify their partners. We also included a section about one special supplier/buyer, as it provided important insights. A special partner was usually the oldest partner, a firm that is a good reference or a foreign partner.
+
+To choose the most important topics and related questions and also to avoid asking about confidential information we met with industry participants. With their cooperation we ran three primary interviews about their firms. During these interviews we learned a lot about what topics to cover and how to ask the right questions. It was extremely helpful as asking the right questions can have a positive impact on response rate as well. As researchers it is sometimes hard to understand the day-to-day operation of firms and we had a chance to see the important aspects that create differences between business groups. We learned about different ways of establishing partnership that we have not thought before. One of them was meeting at an expo, which came up many times later on. It also became clear that we need a clear strategy to ask the relevant info for corporate groups. Especially in the case of big companies firms are strongly connected within a corporate group. In their case many of the original questions lost relevance so we had to include an option to distinguish these companies from independent ones.
+
+We dropped all the questions that have answers available in other datasets and only included some financial numbers (total and export revenue) to help identifying firms and some information not available otherwise (distinction between full-time and temporary work force). Suggested by Bloom, Lemons, Sadun, Scur and Van Reenen (2014) asking about financial situation decreases response rate as it is a confidential information and also because it requires some effort to get the exact numbers. Our experience was in line with that as managers of small companies claimed that only the accountant knows the exact values. So we could not receive the information from him.
+
+\subsection{Finding the right terms and formulating the actual questions}
+
+Another challenge we faced was the different jargon used by researchers and industry participants. As this could lead to serious misinterpretation which would later screw the results, we applied the modifications suggested by them. To understand the key terms used in this field, we attended at the 2015 Supplier Conference. The aim of the conference was to provide help for companies to become global by joining value chains. It showed some forums where the companies can meet and know each other and there were many presentations about the requirements a supplier should fulfill. This event was a great help in understanding the different roles a firm can play in a value chain (e.g. based on the nature of products supplied), the most important challenges they face (for example we got a deep understanding of the audit process before receiving ISO certificate) and the reasons firms opt to have foreign partners instead of Hungarians. This was a critical step in the evolution of the questionnaire and implied serious modifications to make it more life-like. Later it turned out that some of the participants still evaluated it too theoretical.
+
+Identifying the exact partners is essential to create a network of buyers and suppliers. To maximize the accuracy of data we asked the firms to provide the EU VAT number of their partners. We needed it to merge the information with Amadeus dataset for further analysis involving financial data. It turned out that company name is not enough to identify partners in Amadeus, especially for foreign firms. As this information is usually not available on the spot we decided to provide an opportunity to later extend the information provided. The first interviews suggested that firms do not want to bother with looking for the EU VAT number and we got very bad coverage here. It was also clear that they are not keen on looking for this information after the interview is done.
+
+It was a huge challenge to find the right questions about the topic of branding in the manufacturing sectors. Many of our pilot partners do not use it in a way we thought. They e.g. use identifiers to mark their products which is especially useful if maintenance is needed. However according to our research questions it should not be considered as branding.
+
+\subsection{Definitions and a multi-language mindset}
+
+After the first version of the questionnaire was ready we conducted five pilot interviews together with Gfk. Figuring out a questionnaire is not enough, we also had to construct it in a way that the interviewers are able to fill them. Since our survey requires some degree of business knowledge and is an interactive conversation we asked our partner to hire skilled interviewers. On the top of that after deriving the conclusions from the pilot version we organized a training where interviewers had a chance to understand the questions in depth and discuss their worries with the organizer team. Similar events were later organized in each participant countries. Definitions were explained to the interviewers to have comparable data. For example it makes a huge difference whether they give the share of supplier compared to sales or EBITDA. All the interviewers needed to be confident in using these business terms.
+
+It was very important to make a hub in each participating countries and provide a chance for the managers to answer in their native language. We also ensured the possibility that if nobody from the management speaks the native language of the country than the interview can be done in English with the support of skilled individuals hired from the field of economics.
+
+\subsection{Building trust}
+
+As Bloom, Lemons, Sadun, Scur and Van Reenen (2014) claims response rates to surveys have been falling over time. This was strengthen by our experience. Managers claimed that they receive more than one survey call a week therefore we had the challenge to make the survey attractive. We applied many different approaches to reach it.
+
+\begin{enumerate}
+    \item  We promised the participants that they were going to receive meaningful analytics and industry level summary from the results. These outputs can help them to understand the general trends in their industry and compare their firms to industry averages. Naturally all published/distributed results are carefully anonymized. We applied the rules of the Central Statistical Office.
+
+    \item  The survey was controlled by respected institutions (Central European University and the Institute of Economics of the Hungarian Academy of Sciences) and also received professional support from other associations (Hungarian Association of Logistics). The main sponsors of the survey were the Lendület Program of the Hungarian Academy of Sciences and European Research Council. These associations were kindly asked to boost response rate among their members by introducing the survey to them.
+
+    \item  We put a focus on the image and marketing of the research. We created a webpage available in all languages and advertised the survey on related business events. (e.g. at Figyelő forum, which is one of the most prestigious business magazine in Hungary) Communication was also extremely important when we contacted the firms. We put a lot of efforts in writing an entry letter that describes in a clear language the ways we are going to use the dataset.
+
+\end{enumerate}
+
+
+Another issues was to find the appropriate person in the firms. It wasn’t always clear who has all the information that we needed. Our questionnaire required information about supply, which could have implied that the target person is the Procurement Officer. 
+
+However it turned out that in many cases partnership decisions require higher level acceptance. The questions are related to strategic decisions and sometimes has a strong impact of the general operation of the firm. For example joining a global value chain requires many ISO certificate that implies the revision of the entire operation and adoption to pre-defined standards at many levels. It was the responsibility of the interviewers to find the right person within the company. (We collected the position of the interviewee to check for differences based on that.) The position of the interviewed person with the identity of interviewer was collected to improve precision of the estimation.
+
+\subsection{Sampling choice}
+A main methodological choice was that the sampling frame from AMADEUS so we can link financial info to answers
+
+We passed a sample to Gfk with firms for which basic financial information for 2012 and 2013 was available from other sources (Amadeus or Complex). The handed base sample was three times greater than the actual one, as we expected 30\% response rate. The sample contained manufacturing firms in the industries between NACE Rev 2. 20 and 30. We included companies with at least 10 employees. 
+
+% todo miklos: sample stratification. size of sampling frame. oversampling some strata. nace, ownership, size. report on representativity
+
+% todo gergo: check if weights exist in raw dataset
+
+The size of the sample from the three participating countries were adjusted according to their population. The equal distribution was also changed as we did not have enough firms in the base sample) Slovakia had 500 firms, Hungary had 600 firms and Romania had 700 firms.
+
+We used two dimensions of interest in the sampling stratification strategy. We defined numbers to reach in terms of size (10-50, 50-250 and over 250 employees) and ownership. We only distinguished foreign and domestic firms, where all companies with at least one non-Hungarian owner was considered as foreign. This variable came from the Amadeus dataset.
+
+As a result of this methodological decision, we could link our survey data with Amadeus, adding financial information such as sales or assets. At this stage, all financial variables refer to 2013. Eventually we have financial information (such as total sales in 2013) for 82\% of firms in the sample. 
+% TODO: Gergő check all numbers reported
+
+\subsection{Pilots}
+
+We did 10 pilot studies in two rounds – testing two versions of questionnaire. We picked large companies as well as SMEs, domestically and foreign owned as well.
+
+Pilots were essential in deciding about the final version of the questions. There were two key consequences of the pilots.
+
+First, we simplified some questions, merged possible answers - as managers had a broad idea about the industry of the partner, but not much detail. Second, we added some explanations to questions and answers to make sure respondents understand the questions equally well. This was especially important for questions on innovation and learning. 
+
+\subsection{Questionnaire}
+
+Some questions on all suppliers/buyers in a symmetric fashion. 
+
+%%%%%%%%%% TABLE Q1
+% TODO Gergo
+ADD: Table here with example questions
+basically two columns, Q for buyers and Q for suppliers, about 5-8 questions
++ response rate for each q
+
+%%%%%%%%%% TABLE Q2
+% TODO Gergo
+ADD: Table here with example questions
+
+More detailed question on a subset of suppliers/buyers 
+
+basically two columns, Q for buyers and Q for suppliers, about 4-5 questions
++ response rate for each q
+
+%%%%%%%%%% TABLE Q3
+% TODO Gergo
+ADD: Table here with example questions
+
+We also added questions asking about the supplier / buyer pool. 
+
+basically two columns, Q for buyers and Q for suppliers, about 2-4 questions
++ response rate for each q
+
+
+%%%%%%%%%% TABLE Q4
+% TODO Gergo
+
+ADD table on machines
+column 1: questions similar to buyer/supplier
+column 2: machine specific questions
++ response rate for each q
+
+
+%%%%%%%%%% TABLE Q5
+% TODO Gergo
+ADD table on general questions
+Questions on firms, like employment
++ response rate for each q
+
+\subsection{Survey Method}
+% todo gabor
+
+computer assisted personal interview
+
+cannot randomize surveyors across respondents
+
+not as much room for surveyor subjective interpretation as in WMS
+
+% todo gergo
+report some surveyor fixed effects
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data handling and cleaning}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Created a cleaning process}
+
+We created process where we create a file to describe the data structure, and transform raw data into data files we can use. The survey is part a relational database, as the same firm was asked about different topics, and we have additional data tables on the survey process as well financials for firms in the survey. As we checked each step of this process, only very few cleaning steps were needed, mostly coming from some minor differences across country files (such as having email address). 
+
+\subsection{Anonymization} 
+As we asked about very confidential information that are in the core of an organization’s strategy our data handling policy was an important issue from the very beginning. We consulted with lawyers to see our legal bindings and also with industry participants to understand their needs. Based on it we formulated a policy that is acceptable for each party and ensures data protection. A well written NDA was necessary to reach out big firms. It should contain the exact details of whom has an access to the data. Although we did everything possible to convince firms about the data protection, the first round of interviews suggested that it wasn’t enough and many of the interviewees articulated their concerns about fraud.
+
+We promised firms a very robust approach to anonymization, and this is what we did. In particular, all information on company names were masked, and even researchers could only work with data with anonymized ID information only. In addition, we checked variables and cleared names from text (sometimes, firm names were used for unexpected variables).
+
+\subsection{Data storage}
+Regarding data storage, we complied with anonimizyatipn principles - even researchers could see no company ID or names. Anonymized data is shared internally, while raw data is stored on CEU Microdata servers in a safe fashion. 
+
+MORE
+
+
+\subsection{Harmonization} 
+% Miklós/Gergő - check if anything missing
+
+Surveys were very consistent across countries.There were some issues to fix, independent of country of origin and we did several other measures to harmonize variables across firms. In particular we did the following harmonization measures
+
+\begin{enumerate}
+    \item There was one key difference: all values given in national currency or a currency the company used (could be USD). To harmonize this, they were converted to 1000 EUR. In the data we have three variables, the original value, original currency and value in 1000EUR. 
+    
+    \item We corrected partner index numbering to ensure that the largest customer is indeed the one with the largest share (as some respondent mentioned their second largest customer first.) We created a new share rank variable with correct ordering and values only for observations with nonmissing shares. We added a flag, when share was missing. This change affected 3\% of rankings (for all domains, buyers, sellers, machines). 
+    
+    \item We checked if shares were okay, such as typos like 150\% instead of 15\%.  No found no definite evidence, and while some shares could have errors, we saw no patterns suggesting intervention.
+    
+    \item We corrected every type of duplications based on partner information. The problem was that sometimes the "special" buyer/supplier was obviously the same as the one already described as the most important one. We cleaned this by getting rid of duplictaes and creating flags for special or important status. We used the key information on firms to find potential duplicates but also checked some cases by hand. This affected less than 5\% of observations.
+    % TODO: Gergo check
+
+\end{enumerate}
+
+\subsection{Survey quality test}
+% TODO Miklós/Gergő
+
+We took a look to see if there was any important problem with the quality of survey.
+
+We first looked at [ADD HERE]
+
+Second, we
+
+
+Quality check #11, #12: Gergő, Miklós
+regress reported_emp avg_reported_emp_by_surveyor true_emp avg_true_emp_by_surveyor
+interacted with flag_short_interview
+
+ADD HERE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Descriptives}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In this section, we will present key descriptive statistics on buyer and supplier relationships. 
+
+% gabor berak minta tabla, abra
+
+%Define key suppliers if not done before
+
+\subsection{Distributions}
+
+
+A first view of the data is provided by Table \ref{tab:obs}, whoch shows the number of observations along several dimensions. As we have discussed in Section XXXX, there are 1535 firms in the final sample, with 556 from Hungary, 584 from Romania and 395 from Slovakia.  In terms of firm size the majority of firms are small (with more than XXX\% having less than 50 employees) while larger firms only represent XXX \% of the sample. This distribution is similar across countries, with large firms having a relativelly larger share in Slovakia.
+
+%%The percentages by size do not add up
+
+72\% of the firms in our sample is domestically owned and 28\% foreign owened. These shares are also similar in the three countries, with a somewhat higher share of foreign-owned firms (37\%) in Slovakia. In terms of industry, the largest share of firms operate in metal manufactring, followed by rubber/plastic and machinery.
+
+%%%Any numbers from amadeus for the full population of firms?
+
+
+\begin{table}[H]
+\caption{Summary of firms by number of employees, ownership and industry}
+\label{tab:obs}
+\centerline{
+    \input{tables/Table1.tex} 
+}
+{\scriptsize \begin{tabular}{p{2cm}p{10cm}p{1cm}}
+\end{tabular}}
+\end{table}
+
+
+\subsection{Portfolios of buyers and suppliers}
+
+Let us start with providing a picture about the number and distribution of suppliers and buyers. Table \ref{tab:num_supp} shows key statistics about buyers (rows with 'B') and suppliers (rows with 'S'). 
+
+Consider fist the medium number of partners in the third column. A robust insight is that the manufacturing firms in our sample tend to have significantly more buyers (30 in all three countries) than suppliers (between 10 and 20). This is likely to reflect that many of the buyers are likely to be outside manufacturing (and, therefore, the median number of suppliers and buyers need not be equal), and suggest an important asymmetry in the structure of the network. 
+
+\begin{table}[H]
+    \caption{Caption}
+    \label{tab:num_supp}
+    \centerline{
+    \input{tables/Table2.tex}}
+    {\scriptsize \textit{Notes:} This table shows median numbers at the firm level for the number of suppliers, customers, the share of returning partners, the share of the TOP3 partners in sales/material costs and the average length of key relationships.}
+\end{table}
+
+
+The distribution of the ln number of customters is shown in more detail in Figure \ref{fig:kernel}. The shape of this ln-transformed distribution suggest that the original distribution is fat-tailed, with a few firms having a very large number of partners while many firms having a smaller number of partners. Panel A of the Figure distinguishes between small domestic (less than 51 employees), larger domestic and foreign firms. While the shape of the distributions is similar for the three groups of firms, larger firms clearly tend to have more suppliers. Panel B shows the distribution for different countries. The figure suggests that not only the central tendency of the ditribution (as \ref{tab:num_supp} has shown) but also the whole shape of the distribution is very similar across countries.
+
+
+\begin{figure}[!h]
+    \caption{Kernel densities of the number of partners}
+    \label{fig:kernel} 
+    \begin{center}    
+    \subfloat{\includegraphics[width=0.7\textwidth]{graphs/Fig5a.png}}\\
+    \subfloat{\includegraphics[width=0.7\textwidth]{graphs/Fig5b.png}}
+     \end{center}    
+        {\footnotesize \textit{Notes:} This Figure shows kernel densities of the ln number of customers. Small: $< 51$ employees, large otherwise. Foreign: foreign controlled} 
+\end{figure}
+
+
+
+
+The fourth column of Table \ref{tab:num_supp} shows the median share of returning partners ("had bought from /sold to your company previously?")  in all partners. Repeated or longer term relationships seem to be the norm rather than the exception for these firms. In Hungary, for example, for a typical firm, two thirds of buyers and returning buyers while more than 80\% of suppliers supplied the firm previously. We also find that manufacturing firms' relationships with their suppliers are slighly more likely to be repeated than their relationship with their buyers.
+
+
+The fifth column of Table \ref{tab:num_supp} shows that supplier and buyer protfolios of manufacturing firms are quite concentrated. The largest 3 partners represent between 40-60 percent of sales/purchases for the typical firm. This concentration is high when compared to the typical number of partners. We do not find pronounced differences between the concentration of buyers and suppliers, and these shares are similar across countries.
+
+Finally, the last column of Table \ref{tab:num_supp} shows the length of key relationships. Note that this can be only measured for the key relationships of the most important partners rather than all realtionships. We find that key relationships tend to to relativelly old, between 6 and 10 years for the median firm. The longevity of key supplier and buyer relationships appear to be similar. There are pronounced country differences in this respect, with relationships being about 3 years longer in Hungary compared to the other two countries. 
+
+While Table \ref{tab:num_supp} has shown the central tendencies of the different variables, the survey data also allows us to analyse firm heterogeneity in these dimensions. Figure \ref{fig:happy_few} shows the (inverse) CDFs of the different varaibles. Panel A shows the distribution in the number of customers. In line with the patterns in Figure \ref{fig:kernel}, the distribution is skewed, the median firm having 30 customers and the 99th percentile being 400.
+
+There are also substantial differences across firms in terms of the share of their new (non-returning) customers. 40\% of firms served only returning customers in 2015, while 20\% of firms had a share of new customers above 50\%. This pattern reinforces our earlier conclusion that longer-term relationships are the rule rather than the exceptions, but it also details the picture by showing that different firms face large differences in the share of their longer-term relationships.
+
+The different strategic situation of firms is even more pronounced when we consider the concentration of their buyers. The TOP3 customers of the medium firm are responsible for about half of the sales, but the share of TOP 3 buyers is above 80\% for 20\% of firms. This suggests that most firms face at least some buyers with a large power, but a substantial share of firms depend strongly on decisions of a few firms.
+
+\begin{figure}[!h]
+    \caption{Differences between firms}
+    \label{fig:happy_few}
+    \begin{center}
+    \subfloat{\includegraphics[width=0.4\textwidth]{graphs/Fig4a.png}}
+    \subfloat{\includegraphics[width=0.4\textwidth]{graphs/Fig4b.png}}\\
+    \subfloat{\includegraphics[width=0.4\textwidth]{graphs/Fig4c.png}}
+    \subfloat{\includegraphics[width=0.4\textwidth]{graphs/Fig4d.png}}
+    \end{center}    
+        {\footnotesize \textit{Notes:} This Figure shows the percentages (1-99) of the distribution of the above variables.} 
+\end{figure}
+
+
+To sum up, we find that the supplier-buyer relationships of the manufacturing firms in our sample are far away from being atomized and short-term. A large share of partners are returning and the length of key relationships can easily be above 8-10 years. Buyer and supplier power seem to be substantial, with the top 3 partners typically responsible for more than half of sales or purchases. The survey also shows that there is a substantial amount of heterogeneity across firms in terms of how long-term their relationships are and how concentrated their buyer and supplier porfolio is. These facts imply that building supplier/buyer relationships are important strategic choices and may be strongly related to competitiveness.
+
+
+\subsection{Supplier and buyer portfolios and performance}
+
+In this subsection we coduct a simple analysis to see whether the quantity and quality of suppliers is associated with firm performance. 
+
+To do so, we run regressions at the firm level with labor productivity as the dependent variable and measures of the buyer/supplier portfolio as explanatory variables. In particular, we run the following regression
+
+\begin{equation}
+    LP_{i|cjs}=\beta' X_{i}+\gamma \ln employees_i+\eta_c+\theta_j+\delta_s+u_i
+\end{equation}{}
+
+where $i$ denotes firms, $c$ countries, $j$ 2-digit industries and $s$ size categories. $X_{i}$ is the vector of the variables of interest, and $\eta_c$, $\gamma_j$ and $\delta_s$ are sets of country, industry and size category dummies. 
+
+This strategy identifies from comparing firms in the same country, industry and size category but with different buyer and supplier structure. Naturally, in this cross sectional regression many key firm variables remain unobserved, therefore the results should be interpreted as suggestive correlations rather than causal effects.
+
+Table \ref{tab:prod_regs} presents the results of these regressions. In columns (1) only the dummies and the number of byuers/suppliers are included. We find that the number of suppliers (but not that of buyers) is strongly correlated with labour productivity. A firm having twice as many suppliers will have 5.6 log points higher productivity levels. 
+
+In column (2) we start to control for the type of partners a firm has. First, we ask whether having at least one buyer and/or supplier from the firm's business group matters for productivity. Indeed, we find a strong relationship between productivity and the presence of \textit{buyers} from the business group: firms having at least one such buyer have a 15 log points higher productivity level. We also investigate in column (2) whether having foriegn buyers or sellers matters for productivity and find no evidence form that. In column (3) we also include the average lenght of the relationship with key buyers and suppliers. These variables are not significant.
+
+To sum up, labor producivity is indeed correlated with the number of suppliers a firm has and also whether some of the buyers are from the same business group. There results underline that partner portfolios are related to performance and therefore being more successful in building such portfolios may generate a competitive advantage,
+
+%% can control for whether the firm is a member of a business group?
+\begin{table}[H]
+    \caption{Caption}
+    \label{tab:prod_regs}
+    \centerline{\input{tables/Table11.tex}}
+    {\scriptsize \textit{Notes:}}
+\end{table}
+    
+
+
+
+\subsection{Starting relationships}
+
+After showing that performance is related to the number and type of buyers of the firm, it fundamental to ask how these relationships form, i.e. what firm can and should do to build a portfolio which can support high performance more effectivelly.
+
+\subsubsection{How relationships form}
+
+In our questionnaire we asked about each key relationship how it was formed. Based on the answer to that question we can distinguish between (i) supplier initiated; (ii) buyer initiated; (iii) within groups and (iv) Other ways (including professional events). 
+
+
+
+Buyer and supplier-initiated relationships are similarly important. Network etc is relatively less important\\
+By country:
+\begin{figure}[!h]
+    \caption{How do firms find customers?}
+    \label{fig:rel_form1}
+    \begin{center}
+    \includegraphics[width=0.7\textwidth]{graphs/Table6a.png}
+    \end{center}{}    
+       {\footnotesize \textit{Notes:} Notes: The figure shows the distribution of the answers to ’how the relationship started?’ for key relationships (each such relationship when respondent is supplier is one observation).} 
+\end{figure}
+By firm type:
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphs/Table6b.png}
+    \caption{Stacked bar graph \#2}
+    \label{fig:my_label}
+\end{figure}
+
+%%%PUT these two figures into one please!
+
+\subsubsection{Innovation}
+
+\begin{itemize}
+    \item Significant part of supplier relationships starts with innovation. Product and process innovation are complementary. Large country differences.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=0.7\textwidth]{graphs/Fig7a.png}
+        \caption{Have to improve because of relationship?\#1}
+        \label{fig:my_label}
+    \end{figure}
+    \item Large and foreign firms are somewhat more likely to innovate when starting to supply a new customer.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=0.7\textwidth]{graphs/Fig7b.png}
+        \caption{Have to improve because of relationship?\#2}
+        \label{fig:my_label}
+    \end{figure}
+    \item Buyers, especially domestic ones, often provide assistance for product development: consulting in 1/4, technology transfer in 1/8 and asset transfer in 1/16 of key relationships.
+    \input{tables/Table9b.tex}
+\end{itemize}
+
+\begin{table}[H]
+    \caption{Caption}
+    \label{tab:my_label}
+    \centerline{\input{tables/Table12.tex}}
+    {\scriptsize \textit{Notes:}}
+\end{table}
+
+\begin{table}[H]
+    \caption{Caption}
+    \label{tab:my_label}
+    \centerline{\input{tables/Table13.tex}}
+    {\scriptsize \textit{Notes:}}
+\end{table}
+
+
+\pagebreak
+\newpage
+
+\section{Summary and discussion}
+
+
+% todo miklos. what we learnt. what this data can be used for. what are the questions for which such data is needed. debates in econ vs policy? 
+
+
+\section{References}
+
+\bibliographystyle{agsm}
+\bibliography{biblio}
+
+\section{Appendix}
+
+\end{document}
