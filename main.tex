@@ -1,4 +1,4 @@
-x\documentclass[final, dvipsnames, authoryear,12pt]{elsarticle}
+\documentclass[final, dvipsnames, authoryear,12pt]{elsarticle}
 \setcounter{page}{0} \renewcommand{\baselinestretch}{1.0}
 \usepackage[utf8]{inputenc}
 \usepackage{subfiles}
@@ -115,8 +115,6 @@ Administrative firm-to-firm data, such as VAT data, is scarce, and even if avail
 
 \subsection{Existing approaches and results}
 
-% todo miklos: add more literature?
-
 To understand the importance of GVCs and their effect on countries, early research relied on industry-level input-output tables, constructed with international trade data (e.g., \cite{johnson2012accounting, hummels2001nature}. The main purpose of the use of such data were to (1) measure flows of trade between industries and countries and (2) compute the share of value added in gross exports, but they were also used to understand the propagation and amplification of small shocks in the economy (\cite{acemoglu2016networks}. While papers based on aggregate data documented that intermediate inputs played an ever increasing role in international trade since the 1970s which increased abruptly in the last decade of the 20\textsuperscript{th} century and also ranked countries by their value added in manufacturing goods, they have certain limitations that can be overcome only by using microdata.\footnote{For potential points of contact between the input-output and micro data approach as well as a concise treatment of the input-output approach, see \cite{johnson2018measuring}.} For example, the heterogeneity of firms by the number and other characteristics of business linkages cannot be studied without firm-level data. Interesting attributes of linkages are the number of upstream and downstream connections, the length of the relation, the tye of firms connected to and so on. In addition, as input-output tables are typically based on import and export data, firm-level information is necessary to study intra-country firm connections, which is crucial for understanding wich SMEs are able to connect to GVCs or large national enterprises.
 
 Besides the vast literature on international trade that uses firm-level information, \footnote{ADD REFS}, oly a handful of studies are based on data that have business linkages to assess their effects on firm behavior. Two types of such data exist, those of administrative origin and surveys. \footnote{A common feature of all these data are that information on linkages and on firm performance (in form of balance sheet and income statement) are from different sources, and the performance data usually is of administrative origin.} In the following paragraphs, we briefly present the main interest and the data of each paper to serve as comparison with our survey data and purpose of research.
@@ -221,26 +219,21 @@ Another issues was to find the appropriate person in the firms. It wasn’t alwa
 However it turned out that in many cases partnership decisions require higher level acceptance. The questions are related to strategic decisions and sometimes has a strong impact of the general operation of the firm. For example joining a global value chain requires many ISO certificate that implies the revision of the entire operation and adoption to pre-defined standards at many levels. It was the responsibility of the interviewers to find the right person within the company. (We collected the position of the interviewee to check for differences based on that.) The position of the interviewed person with the identity of interviewer was collected to improve precision of the estimation.
 
 \subsection{Sampling choice}
-A main methodological choice was that the sampling frame from AMADEUS so we can link financial info to answers
+We constructed a sampling frame based on the AMADEUS database \cite{amadeus} so that we can link survey responses to financial information. The target population included manufacturing firms in the industries between 20 and 30 (NACE Revision 2) with at least 10 employees.
 
-We passed a sample to Gfk with firms for which basic financial information for 2012 and 2013 was available from other sources (Amadeus or Complex). The handed base sample was three times greater than the actual one, as we expected 30\% response rate. The sample contained manufacturing firms in the industries between NACE Rev 2. 20 and 30. We included companies with at least 10 employees. 
+We selected firms for which basic financial information for 2012 and 2013 was available. We anticipated a response rate of 30\%, so our sampling frame included more firms than the actual sample. We used two dimensions of interest in the sampling stratification strategy: size (10-50, 50-250 and over 250 employees) and ownership. We only distinguished foreign and domestic firms, where all companies with at least one non-Hungarian owner were considered  foreign. Both variables came from the Amadeus dataset. We created inverse probability weights to restore the representativity of our sample to the whole population of firms in the target population.
 
 % todo miklos: sample stratification. size of sampling frame. oversampling some strata. nace, ownership, size. report on representativity
 
 % todo gergo: check if weights exist in raw dataset
 
-The size of the sample from the three participating countries were adjusted according to their population. The equal distribution was also changed as we did not have enough firms in the base sample) Slovakia had 500 firms, Hungary had 600 firms and Romania had 700 firms.
+The size of the sample from the three participating countries were adjusted according to their population. Slovakia had 500 firms, Hungary had 600 firms and Romania had 700 firms.
 
-We used two dimensions of interest in the sampling stratification strategy. We defined numbers to reach in terms of size (10-50, 50-250 and over 250 employees) and ownership. We only distinguished foreign and domestic firms, where all companies with at least one non-Hungarian owner was considered as foreign. This variable came from the Amadeus dataset.
-
-As a result of this methodological decision, we could link our survey data with Amadeus, adding financial information such as sales or assets. At this stage, all financial variables refer to 2013. Eventually we have financial information (such as total sales in 2013) for 82\% of firms in the sample. 
+Given our sampling frame, we could link our survey data with Amadeus, adding financial information such as sales or assets. At this stage, all financial variables refer to 2013. Eventually we have financial information (such as total sales in 2013) for 82\% of firms in the sample. 
 % TODO: Gergő check all numbers reported
 
 \subsection{Pilots}
-
-We did 10 pilot studies in two rounds – testing two versions of questionnaire. We picked large companies as well as SMEs, domestically and foreign owned as well.
-
-Pilots were essential in deciding about the final version of the questions. There were two key consequences of the pilots.
+We did 10 pilot studies in two rounds, testing two versions of questionnaire. We picked large companies as well as SMEs, domestically and foreign owned as well. Pilots were essential in deciding about the final version of the questions. There were two key consequences of the pilots.
 
 First, we simplified some questions, merged possible answers - as managers had a broad idea about the industry of the partner, but not much detail. Second, we added some explanations to questions and answers to make sure respondents understand the questions equally well. This was especially important for questions on innovation and learning. 
 
@@ -322,35 +315,26 @@ MORE
 \subsection{Harmonization} 
 % Miklós/Gergő - check if anything missing
 
-Surveys were very consistent across countries.There were some issues to fix, independent of country of origin and we did several other measures to harmonize variables across firms. In particular we did the following harmonization measures
+Surveys were very consistent across countries. There were some issues to fix, independent of country of origin and we did several other measures to harmonize variables across firms. In particular we did the following harmonization measures.
 
 \begin{enumerate}
-    \item There was one key difference: all values given in national currency or a currency the company used (could be USD). To harmonize this, they were converted to 1000 EUR. In the data we have three variables, the original value, original currency and value in 1000EUR. 
+    \item All values given in national currency or a currency the company used (could be USD). To harmonize this, they were converted to 1,000 EUR. 
     
-    \item We corrected partner index numbering to ensure that the largest customer is indeed the one with the largest share (as some respondent mentioned their second largest customer first.) We created a new share rank variable with correct ordering and values only for observations with nonmissing shares. We added a flag, when share was missing. This change affected 3\% of rankings (for all domains, buyers, sellers, machines). 
+    \item We corrected partner index numbering to ensure that the largest customer is indeed the one with the largest share (as some respondents mentioned their second largest customer first). We created a new share rank variable with correct ordering and values only for observations with nonmissing shares. We added a flag when share was missing. This change affected 3\% of rankings (for all domains, buyers, sellers, machines). 
     
-    \item We checked if shares were okay, such as typos like 150\% instead of 15\%.  No found no definite evidence, and while some shares could have errors, we saw no patterns suggesting intervention.
+    \item We checked if shares satisfied basic algebraic constraints, such as being less than 100\% and summing up to less than 100\%. While some shares could have been erroneous, we saw no patterns suggesting intervention.
     
-    \item We corrected every type of duplications based on partner information. The problem was that sometimes the "special" buyer/supplier was obviously the same as the one already described as the most important one. We cleaned this by getting rid of duplictaes and creating flags for special or important status. We used the key information on firms to find potential duplicates but also checked some cases by hand. This affected less than 5\% of observations.
+    \item We corrected every type of duplication based on partner information. The ``special'' buyer/supplier mentioned by the respondent was sometimes the same as the one already described as the most important one. We cleaned this by getting rid of duplicates. We used the key information on firms to find potential duplicates but also checked some cases by hand. This affected less than 5\% of observations.
     % TODO: Gergo check
 
 \end{enumerate}
 
 \subsection{Survey quality test}
-% TODO Miklós/Gergő
+To study the quality of responses, we conducted several checks. We looked for correlations between quality of the survey data and metadata. Data quality can be captured by item non-response: how many questions remain unanswered on the questionnaire. Survey metadata includes an anonymous identifier of the surveyor and the precise time stamp of starting and completing the survey. These were recorded in the survey application, as all interviews were computer aided. 
 
-We took a look to see if there was any important problem with the quality of survey.
+We identified several surveyors who were outliers in terms of the number of interviews conducted (too many), the time gap between surveys (too short), or the length of the interview (too short). However, interviews conducted by these surveyors did not differ significantly in terms of data quality indicators such as the prevalence of item nonresponse. We could not rule out that these interviews were, in fact, conducted in the same fashion as others, with data entry into the survey application happening at a later stage.
 
-We first looked at [ADD HERE]
-
-Second, we
-
-
-Quality check #11, #12: Gergő, Miklós
-regress reported_emp avg_reported_emp_by_surveyor true_emp avg_true_emp_by_surveyor
-interacted with flag_short_interview
-
-ADD HERE
+%% Gergo pls check language here
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Descriptives}
