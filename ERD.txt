@@ -1,0 +1,29 @@
+classDiagram
+	class Respondent
+	class Partner
+	class Respondent_Name
+	class Partner_Name
+
+	Partner "many" ..> "one" Respondent : supplier,buyer
+	Respondent "one" .. "one" Respondent_Name
+	Partner "one" .. "one" Partner_Name
+
+	Respondent : financials
+	Respondent : ownership
+	Respondent : branding
+
+	Respondent_Name : name
+	Respondent_Name : country
+	Respondent_Name : EU VAT identifier
+	Respondent_Name : (limited access, encrypted)
+
+	Partner_Name : name
+	Partner_Name : country
+	Partner_Name : EU VAT identifier
+	Partner_Name : (limited access, encrypted)
+
+	Partner : transaction size
+	Partner : length of relation
+	Partner : assistance
+	Partner : product
+	Partner : specificity
