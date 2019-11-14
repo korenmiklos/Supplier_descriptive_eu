@@ -5,7 +5,7 @@
 \usepackage{todonotes}
 \usepackage[left=3cm, right=3cm, top=3cm]{geometry} 
 
-\usepackage{epsfig,amssymb,calc,float,longtable,natbib,rotating,url, grffile, supertabular}
+\usepackage{epsfig,amssymb,calc,float,longtable,natbib,rotating,url, grffile, supertabular, subfig}
 
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
@@ -337,7 +337,6 @@ We identified several surveyors who were outliers in terms of the number of inte
 
 In this section, we will present key descriptive statistics on buyer and supplier relationships. 
 
-% gabor berak minta tabla, abra
 
 %Define key suppliers if not done before
 
@@ -351,6 +350,7 @@ A first view of the data is provided by Table \ref{tab:obs}, whoch shows the num
 72\% of the firms in our sample is domestically owned and 28\% foreign owened. These shares are also similar in the three countries, with a somewhat higher share of foreign-owned firms (37\%) in Slovakia. In terms of industry, the largest share of firms operate in metal manufactring, followed by rubber/plastic and machinery.
 
 %%%Any numbers from amadeus for the full population of firms?
+
 
 
 \begin{table}[H]
@@ -371,7 +371,7 @@ Let us start with providing a picture about the number and distribution of suppl
 Consider fist the medium number of partners in the third column. A robust insight is that the manufacturing firms in our sample tend to have significantly more buyers (30 in all three countries) than suppliers (between 10 and 20). This is likely to reflect that many of the buyers are likely to be outside manufacturing (and, therefore, the median number of suppliers and buyers need not be equal), and suggest an important asymmetry in the structure of the network. 
 
 \begin{table}[H]
-    \caption{Caption}
+    \caption{Buyer and supplier portfolios (medians)}
     \label{tab:num_supp}
     \centerline{
     \input{tables/Table2.tex}}
@@ -382,15 +382,20 @@ Consider fist the medium number of partners in the third column. A robust insigh
 The distribution of the ln number of customters is shown in more detail in Figure \ref{fig:kernel}. The shape of this ln-transformed distribution suggest that the original distribution is fat-tailed, with a few firms having a very large number of partners while many firms having a smaller number of partners. Panel A of the Figure distinguishes between small domestic (less than 51 employees), larger domestic and foreign firms. While the shape of the distributions is similar for the three groups of firms, larger firms clearly tend to have more suppliers. Panel B shows the distribution for different countries. The figure suggests that not only the central tendency of the ditribution (as \ref{tab:num_supp} has shown) but also the whole shape of the distribution is very similar across countries.
 
 
-\begin{figure}[!h]
-    \caption{Kernel densities of the number of partners}
-    \label{fig:kernel} 
-    \begin{center}    
-    \subfloat{\includegraphics[width=0.7\textwidth]{graphs/Fig5a.png}}\\
-    \subfloat{\includegraphics[width=0.7\textwidth]{graphs/Fig5b.png}}
-     \end{center}    
-        {\footnotesize \textit{Notes:} This Figure shows kernel densities of the ln number of customers. Small: $< 51$ employees, large otherwise. Foreign: foreign controlled} 
+\begin{figure}[h]    
+    \begin{center}
+    \caption{Kernel densities of the number of customers}
+    \label{fig:kernel}       
+    \begin{subfloat}[By firm type]
+    {\includegraphics[scale=0.5]{graphs/Fig5a.png}}
+    \end{subfloat}
+    \begin{subfloat}[By country]
+    {\includegraphics[scale=0.5]{graphs/Fig5b.png}}
+    \end{subfloat}
+    \end{center}
+    {\footnotesize \textit{Notes:} This Figure shows kernel densities of the ln number of customers. Small: $< 51$ employees, large otherwise. Foreign: foreign controlled}     
 \end{figure}
+
 
 
 
@@ -408,18 +413,19 @@ There are also substantial differences across firms in terms of the share of the
 
 The different strategic situation of firms is even more pronounced when we consider the concentration of their buyers. The TOP3 customers of the medium firm are responsible for about half of the sales, but the share of TOP 3 buyers is above 80\% for 20\% of firms. This suggests that most firms face at least some buyers with a large power, but a substantial share of firms depend strongly on decisions of a few firms.
 
+\newgeometry{top=4cm}
 \begin{figure}[!h]
     \caption{Differences between firms}
     \label{fig:happy_few}
     \begin{center}
-    \subfloat{\includegraphics[width=0.4\textwidth]{graphs/Fig4a.png}}
-    \subfloat{\includegraphics[width=0.4\textwidth]{graphs/Fig4b.png}}\\
-    \subfloat{\includegraphics[width=0.4\textwidth]{graphs/Fig4c.png}}
-    \subfloat{\includegraphics[width=0.4\textwidth]{graphs/Fig4d.png}}
+    \subfloat[Number of customers]{\includegraphics[width=7cm]{graphs/Fig4a.png}}
+    \subfloat[Share of new customers]{\includegraphics[width=7cm]{graphs/Fig4b.png}}\\
+    \subfloat[Share of top customer]{\includegraphics[width=7cm]{graphs/Fig4c.png}}
+    \subfloat[Share of top3 customers]{\includegraphics[width=7cm]{graphs/Fig4d.png}}
     \end{center}    
         {\footnotesize \textit{Notes:} This Figure shows the percentages (1-99) of the distribution of the above variables.} 
 \end{figure}
-
+\restoregeometry
 
 To sum up, we find that the supplier-buyer relationships of the manufacturing firms in our sample are far away from being atomized and short-term. A large share of partners are returning and the length of key relationships can easily be above 8-10 years. Buyer and supplier power seem to be substantial, with the top 3 partners typically responsible for more than half of sales or purchases. The survey also shows that there is a substantial amount of heterogeneity across firms in terms of how long-term their relationships are and how concentrated their buyer and supplier porfolio is. These facts imply that building supplier/buyer relationships are important strategic choices and may be strongly related to competitiveness.
 
@@ -446,10 +452,10 @@ To sum up, labor producivity is indeed correlated with the number of suppliers a
 
 %% can control for whether the firm is a member of a business group?
 \begin{table}[H]
-    \caption{Caption}
+    \caption{Labor productivity and supplier/buyer charateristics}
     \label{tab:prod_regs}
     \centerline{\input{tables/Table11.tex}}
-    {\scriptsize \textit{Notes:}}
+    {\scriptsize \textit{Notes:} The table shows OLS regressions when the dependent variable is ln(labor productivity). One observation is one respon- dent. Business group and for- eign refers to whether the firm has at least one such partner, while length is the average length of key relationships. Standard errors in parentheses$ *** p$<$0.01, ** p$<$0.05, * p$<$0.1 $}
 \end{table}
     
 
@@ -467,21 +473,21 @@ In our questionnaire we asked about each key relationship how it was formed. Bas
 
 Buyer and supplier-initiated relationships are similarly important. Network etc is relatively less important\\
 By country:
-\begin{figure}[!h]
-    \caption{How do firms find customers?}
-    \label{fig:rel_form1}
+
+\begin{figure}[h]    
     \begin{center}
-    \includegraphics[width=0.7\textwidth]{graphs/Table6a.png}
-    \end{center}{}    
-       {\footnotesize \textit{Notes:} Notes: The figure shows the distribution of the answers to ’how the relationship started?’ for key relationships (each such relationship when respondent is supplier is one observation).} 
+    \label{fig:rel_form}    
+    \caption{How do firms find customers?}  
+    \begin{subfloat}[By country]
+    {\includegraphics[scale=0.5]{graphs/Table6a.png}}
+    \end{subfloat}
+    \begin{subfloat}[By firm type]
+    {\includegraphics[scale=0.5]{graphs/Table6b.png}}
+    \end{subfloat}
+    \end{center}
+    {\footnotesize \textit{Notes:} The figure shows the distribution of the answers to ’how the relationship started?’ for key relationships (each such relationship when respondent is supplier is one observation).}     
 \end{figure}
-By firm type:
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{graphs/Table6b.png}
-    \caption{Stacked bar graph \#2}
-    \label{fig:my_label}
-\end{figure}
+
 
 %%%PUT these two figures into one please!
 
@@ -489,40 +495,44 @@ By firm type:
 
 \begin{itemize}
     \item Significant part of supplier relationships starts with innovation. Product and process innovation are complementary. Large country differences.
-    \begin{figure}[!h]
-        \centering
-        \includegraphics[width=0.7\textwidth]{graphs/Fig7a.png}
-        \caption{Have to improve because of relationship?\#1}
-        \label{fig:my_label}
-    \end{figure}
-    \item Large and foreign firms are somewhat more likely to innovate when starting to supply a new customer.
-    \begin{figure}[!h]
-        \centering
-        \includegraphics[width=0.7\textwidth]{graphs/Fig7b.png}
-        \caption{Have to improve because of relationship?\#2}
-        \label{fig:my_label}
-    \end{figure}
+  
+
+    
+ \begin{figure}[h]    
+    \begin{center}
+    \label{fig:inn}    
+    \caption{Innovation when relationship starts}  
+     \label{fig:innov}
+    \begin{subfloat}[By country]
+    {\includegraphics[scale=0.5]{graphs/Fig7a.png}}
+    \end{subfloat}
+    \begin{subfloat}[By size and ownership]
+    {\includegraphics[scale=0.5]{graphs/Fig7b.png}}
+    \end{subfloat}
+    \end{center}
+    {\footnotesize \textit{Notes:} The figure shows the distribution of the answers to ’did the firm have to improve its product/process for the relationship at the beginning’ for key relationships (each such relationship when respondent is supplier is one observation).}     
+\end{figure}   
+    
+
     \item Buyers, especially domestic ones, often provide assistance for product development: consulting in 1/4, technology transfer in 1/8 and asset transfer in 1/16 of key relationships.
-    \input{tables/Table9b.tex}
 \end{itemize}
-
-\begin{table}[H]
-    \caption{Caption}
-    \label{tab:my_label}
-    \centerline{\input{tables/Table12.tex}}
-    {\scriptsize \textit{Notes:}}
-\end{table}
-
-\begin{table}[H]
-    \caption{Caption}
-    \label{tab:my_label}
-    \centerline{\input{tables/Table13.tex}}
-    {\scriptsize \textit{Notes:}}
+    
+\begin{table}[h]
+    \caption{Firm characteritics and relationship lenght (median)}
+    \label{tab:char_length}    
+    \input{tables/Table9b.tex}
+    {\scriptsize \textit{Notes:} The figure shows the median length of key relationships (each such relationship when respondent is supplier is one observation). SME: <=50 employees, large otherwise.}
 \end{table}
 
 
-\pagebreak
-\newpage
+\begin{table}[h]
+    \caption{Support for innovation from customers at the start of the relationship}
+    \label{tab:start_support}
+    \input{tables/Table9a.tex}
+    {\scriptsize \textit{Notes:} The figure shows the distribution of the answers to the question about the type of assistance provided by the buyer for product development at the start of the relationship for key relationships (each such relationship when respondent is supplier is one observation). SME: $<50$ employees, large otherwise.}
+\end{table}
+
+
 
 \section{Summary and discussion}
 
