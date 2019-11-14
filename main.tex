@@ -293,13 +293,13 @@ We created process where we create a file to describe the data structure, and tr
     \begin{center}    
     \includegraphics[width=0.7\textwidth]{graphs/ERD.png}
      \end{center}    
-        {\footnotesize \textit{Notes:} This Figure shows the Entity-Relation Diagram of our analysis dataset. Each respondent can have multiple partners reported. The names of respondents and partners have been separated out in tables and handled separately to preserve anonymity. The graph gives a sample of information know about each entity, not a full list of variables.} 
+        {\footnotesize \textit{Notes:} This Figure shows the Entity-Relation Diagram of our analysis dataset. Each respondent can have multiple partners reported. The names of respondents and partners have been separated out in tables and handled separately to preserve anonymity. The graph gives a sample of information known about each entity, not a full list of variables.} 
 \end{figure}
 
 \subsection{Anonymization and data storage} 
 As we asked about very confidential information that are in the core of an organization’s strategy, our data handling policy was an important issue from the very beginning. We consulted with lawyers about legal constraints and also with industry participants to understand their needs. Our research was also approved by the Ethical Research Committee of Central European University and underwent an ethics self-review for the European Research Council.
 
-We formulated a Data Security Policy that is acceptable for each party and ensures data protection (see Appendix ??). It contains the exact details about what kind of data is collected for what purposes, and the technical and personnel restrictions on data access. These assurances notwithstanding, some of the interviewees refused to reveal private, business sensitive information such as the name of business partners. Among the ?? respondents ?? did not name any of its business partners.
+We formulated a Data Security Policy that is acceptable for each party and ensures data protection (see Appendix ??). It contains the exact details about what kind of data is collected for what purposes, and the technical and personnel restrictions on data access. These assurances notwithstanding, some of the interviewees refused to reveal private, business sensitive information such as the name of business partners. Among the 1535 respondents ?? did not name any of its business partners.
 
 Our data workflow provided a robust approach to anonymization. In particular, all information on company names and other identifiable information were masked, and even researchers could only work with data with anonymized  information only. In addition, we checked variables and cleared names from text (sometimes firm names were mentioned in other free text questions).
 
@@ -341,11 +341,11 @@ In this section, we will present key descriptive statistics on buyer and supplie
 \subsection{Distributions}
 
 
-A first view of the data is provided by Table \ref{tab:obs}, whoch shows the number of observations along several dimensions. As we have discussed in Section XXXX, there are 1535 firms in the final sample, with 556 from Hungary, 584 from Romania and 395 from Slovakia.  In terms of firm size the majority of firms are small (with more than XXX\% having less than 50 employees) while larger firms only represent XXX \% of the sample. This distribution is similar across countries, with large firms having a relativelly larger share in Slovakia.
+A first view of the data is provided by Table \ref{tab:obs}, whoch shows the number of observations along several dimensions. As we have discussed in Section XXXX, there are 1535 firms in the final sample, with 556 from Hungary, 584 from Romania and 395 from Slovakia.  In terms of firm size the majority of firms are small, with almost two thirds having less than 50 employees. This distribution is similar across countries, with large firms having a relativelly larger share in Slovakia.
 
 %%The percentages by size do not add up
 
-72\% of the firms in our sample is domestically owned and 28\% foreign owened. These shares are also similar in the three countries, with a somewhat higher share of foreign-owned firms (37\%) in Slovakia. In terms of industry, the largest share of firms operate in metal manufactring, followed by rubber/plastic and machinery.
+The vast majority, 72\% of the firms in our sample is domestically owned and 28\% foreign owened. These shares are also similar in the three countries, with a somewhat higher share of foreign-owned firms (37\%) in Slovakia. In terms of industry, the largest share of firms operate in metal manufactring, followed by rubber/plastic and machinery.
 
 %%%Any numbers from amadeus for the full population of firms?
 
@@ -377,12 +377,12 @@ Consider fist the medium number of partners in the third column. A robust insigh
 \end{table}
 
 
-The distribution of the ln number of customters is shown in more detail in Figure \ref{fig:kernel}. The shape of this ln-transformed distribution suggest that the original distribution is fat-tailed, with a few firms having a very large number of partners while many firms having a smaller number of partners. Panel A of the Figure distinguishes between small domestic (less than 51 employees), larger domestic and foreign firms. While the shape of the distributions is similar for the three groups of firms, larger firms clearly tend to have more suppliers. Panel B shows the distribution for different countries. The figure suggests that not only the central tendency of the ditribution (as \ref{tab:num_supp} has shown) but also the whole shape of the distribution is very similar across countries.
+The distribution of the log number of customers is shown in more detail in Figure \ref{fig:kernel}. The shape of this log-transformed distribution suggest that the original distribution is fat-tailed, with a few firms having a very large number of partners while many firms having a smaller number of partners. Panel A of the Figure distinguishes between small domestic (less than 51 employees), larger domestic and foreign firms. While the shape of the distribution is similar for the three groups of firms, larger firms clearly tend to have more suppliers. Panel B shows the distribution for different countries. The figure suggests that not only the central tendency of the distribution (as \ref{tab:num_supp} has shown) but also the whole shape of the distribution is very similar across countries.
 
 
 \begin{figure}[h]    
     \begin{center}
-    \caption{Kernel densities of the number of customers}
+    \caption{Kernel densities of the number of buyers}
     \label{fig:kernel}       
     \begin{subfloat}[By firm type]
     {\includegraphics[scale=0.5]{graphs/Fig5a.png}}
@@ -391,25 +391,21 @@ The distribution of the ln number of customters is shown in more detail in Figur
     {\includegraphics[scale=0.5]{graphs/Fig5b.png}}
     \end{subfloat}
     \end{center}
-    {\footnotesize \textit{Notes:} This Figure shows kernel densities of the ln number of customers. Small: $< 51$ employees, large otherwise. Foreign: foreign controlled}     
+    {\footnotesize \textit{Notes:} This Figure shows kernel densities of the natural logarithm of the number of buyers. Small: $< 51$ employees, large otherwise. Foreign: foreign controlled.}
 \end{figure}
 
 
+The fourth column of Table \ref{tab:num_supp} shows the median share of returning partners (``had bought from /sold to your company previously?"). Repeated or longer term relationships seem to be the norm rather than the exception for these firms. In Hungary, for example, for a typical firm, two thirds of buyers are returning buyers while more than 80\% of suppliers supplied the firm previously. We also find that manufacturing firms' relationships with their suppliers are slightly more likely to be repeated than their relationship with their buyers.
 
+The fifth column of Table \ref{tab:num_supp} shows that supplier and buyer portfolios of manufacturing firms are quite concentrated. The largest three partners represent between 40 and 60\% of sales/purchases for the typical firm. This concentration is high when compared to the typical number of partners. We do not find pronounced differences between the concentration of buyers and suppliers, and these shares are similar across countries.
 
+Finally, the last column of Table \ref{tab:num_supp} shows the length of key relationships. Note that this can be only measured for the most important partners rather than all relationships, as we asked this question only about a limited number of partner. We find that key relationships tend to to relatively old, between 6 and 10 years for the median firm. The longevity of key supplier and buyer relationships appear to be similar. There are pronounced country differences in this respect, with relationships being about 3 years longer in Hungary compared to the other two countries. 
 
-The fourth column of Table \ref{tab:num_supp} shows the median share of returning partners ("had bought from /sold to your company previously?")  in all partners. Repeated or longer term relationships seem to be the norm rather than the exception for these firms. In Hungary, for example, for a typical firm, two thirds of buyers and returning buyers while more than 80\% of suppliers supplied the firm previously. We also find that manufacturing firms' relationships with their suppliers are slighly more likely to be repeated than their relationship with their buyers.
+While Table \ref{tab:num_supp} has shown the central tendencies of the different variables, the survey data also allows us to analyse firm heterogeneity in these dimensions. Figure \ref{fig:happy_few} shows the inverse cumulative distribution functions of several variables. Panel A shows the distribution in the number of customers. In line with the patterns in Figure \ref{fig:kernel}, the distribution is skewed, the median firm having 30 customers and the 99th percentile being 400.
 
+There are also substantial differences across firms in terms of the share of their new (non-returning) customers. Exactly 40\% of firms served only returning customers in 2015, while 20\% of firms had a share of new customers above 50\%. This pattern reinforces our earlier conclusion that longer-term relationships are the rule rather than the exception, but it also details the picture by showing that different firms face large differences in the share of their longer-term relationships.
 
-The fifth column of Table \ref{tab:num_supp} shows that supplier and buyer protfolios of manufacturing firms are quite concentrated. The largest 3 partners represent between 40-60 percent of sales/purchases for the typical firm. This concentration is high when compared to the typical number of partners. We do not find pronounced differences between the concentration of buyers and suppliers, and these shares are similar across countries.
-
-Finally, the last column of Table \ref{tab:num_supp} shows the length of key relationships. Note that this can be only measured for the key relationships of the most important partners rather than all realtionships. We find that key relationships tend to to relativelly old, between 6 and 10 years for the median firm. The longevity of key supplier and buyer relationships appear to be similar. There are pronounced country differences in this respect, with relationships being about 3 years longer in Hungary compared to the other two countries. 
-
-While Table \ref{tab:num_supp} has shown the central tendencies of the different variables, the survey data also allows us to analyse firm heterogeneity in these dimensions. Figure \ref{fig:happy_few} shows the (inverse) CDFs of the different varaibles. Panel A shows the distribution in the number of customers. In line with the patterns in Figure \ref{fig:kernel}, the distribution is skewed, the median firm having 30 customers and the 99th percentile being 400.
-
-There are also substantial differences across firms in terms of the share of their new (non-returning) customers. 40\% of firms served only returning customers in 2015, while 20\% of firms had a share of new customers above 50\%. This pattern reinforces our earlier conclusion that longer-term relationships are the rule rather than the exceptions, but it also details the picture by showing that different firms face large differences in the share of their longer-term relationships.
-
-The different strategic situation of firms is even more pronounced when we consider the concentration of their buyers. The TOP3 customers of the medium firm are responsible for about half of the sales, but the share of TOP 3 buyers is above 80\% for 20\% of firms. This suggests that most firms face at least some buyers with a large power, but a substantial share of firms depend strongly on decisions of a few firms.
+The different strategic situation of firms is even more pronounced when we consider the concentration of their buyers. The top 3 buyers of the median firm are responsible for about half of the sales, but the share of top 3 buyers is above 80\% for 20\% of firms. This suggests that most firms face at least some buyers with a large power, but a substantial share of firms depend strongly on decisions of a few firms.
 
 \newgeometry{top=4cm}
 \begin{figure}[!h]
@@ -419,55 +415,45 @@ The different strategic situation of firms is even more pronounced when we consi
     \subfloat[Number of customers]{\includegraphics[width=7cm]{graphs/Fig4a.png}}
     \subfloat[Share of new customers]{\includegraphics[width=7cm]{graphs/Fig4b.png}}\\
     \subfloat[Share of top customer]{\includegraphics[width=7cm]{graphs/Fig4c.png}}
-    \subfloat[Share of top3 customers]{\includegraphics[width=7cm]{graphs/Fig4d.png}}
+    \subfloat[Share of top 3 customers]{\includegraphics[width=7cm]{graphs/Fig4d.png}}
     \end{center}    
         {\footnotesize \textit{Notes:} This Figure shows the percentages (1-99) of the distribution of the above variables.} 
 \end{figure}
 \restoregeometry
 
-To sum up, we find that the supplier-buyer relationships of the manufacturing firms in our sample are far away from being atomized and short-term. A large share of partners are returning and the length of key relationships can easily be above 8-10 years. Buyer and supplier power seem to be substantial, with the top 3 partners typically responsible for more than half of sales or purchases. The survey also shows that there is a substantial amount of heterogeneity across firms in terms of how long-term their relationships are and how concentrated their buyer and supplier porfolio is. These facts imply that building supplier/buyer relationships are important strategic choices and may be strongly related to competitiveness.
+To sum up, we find that the supplier-buyer relationships of the manufacturing firms in our sample are far away from being atomized and short-term. A large share of partners are returning and the length of key relationships can easily be above 8-10 years. Buyer and supplier power seem to be substantial, with the top 3 partners typically responsible for more than half of sales or purchases. The survey also shows that there is a substantial amount of heterogeneity across firms in terms of how long-term their relationships are and how concentrated their buyer and supplier portfolio is. These facts imply that building supplier/buyer relationships are important strategic choices and may be strongly related to competitiveness.
 
 
 \subsection{Supplier and buyer portfolios and performance}
 
-In this subsection we coduct a simple analysis to see whether the quantity and quality of suppliers is associated with firm performance. 
-
-To do so, we run regressions at the firm level with labor productivity as the dependent variable and measures of the buyer/supplier portfolio as explanatory variables. In particular, we run the following regression
-
+In this subsection we conduct a simple analysis to see whether the quantity and quality of suppliers is associated with firm performance. To do so, we run regressions at the firm level with labor productivity as the dependent variable and measures of the buyer/supplier portfolio as explanatory variables. In particular, we run the following regression
 \begin{equation}
-    LP_{i|cjs}=\beta' X_{i}+\gamma \ln employees_i+\eta_c+\theta_j+\delta_s+u_i
+    LP_{i|cjs}=\beta' X_{i}+\gamma \ln \text{employees}_i+\eta_c+\theta_j+\delta_s+u_i,
 \end{equation}{}
-
-where $i$ denotes firms, $c$ countries, $j$ 2-digit industries and $s$ size categories. $X_{i}$ is the vector of the variables of interest, and $\eta_c$, $\gamma_j$ and $\delta_s$ are sets of country, industry and size category dummies. 
+where $i$ denotes firms, $c$ countries, $j$ 2-digit industries and $s$ size categories, $X_{i}$ is the vector of the variables of interest, and $\eta_c$, $\theta_j$ and $\delta_s$ are sets of country, industry and size category dummies. 
 
 This strategy identifies from comparing firms in the same country, industry and size category but with different buyer and supplier structure. Naturally, in this cross sectional regression many key firm variables remain unobserved, therefore the results should be interpreted as suggestive correlations rather than causal effects.
 
-Table \ref{tab:prod_regs} presents the results of these regressions. In columns (1) only the dummies and the number of byuers/suppliers are included. We find that the number of suppliers (but not that of buyers) is strongly correlated with labour productivity. A firm having twice as many suppliers will have 5.6 log points higher productivity levels. 
+Table \ref{tab:prod_regs} presents the results of these regressions. In column (1) only the number of buyers/suppliers are included in addition to firm controls. We find that the number of suppliers (but not that of buyers) is strongly correlated with labour productivity. A firm having twice as many suppliers will have 4.2\% higher productivity levels. 
 
-In column (2) we start to control for the type of partners a firm has. First, we ask whether having at least one buyer and/or supplier from the firm's business group matters for productivity. Indeed, we find a strong relationship between productivity and the presence of \textit{buyers} from the business group: firms having at least one such buyer have a 15 log points higher productivity level. We also investigate in column (2) whether having foriegn buyers or sellers matters for productivity and find no evidence form that. In column (3) we also include the average lenght of the relationship with key buyers and suppliers. These variables are not significant.
+In column (2) we start to control for the type of partners a firm has. First, we ask whether having at least one buyer and/or supplier from the firm's business group matters for productivity. Indeed, we find a strong relationship between productivity and the presence of \textit{buyers} from the business group: firms having at least one such buyer have a 15\% higher productivity level. We also investigate in column (2) whether having foreign buyers or sellers matters for productivity and find no evidence form that. In column (3) we also include the average length of the relationship with key buyers and suppliers. These variables are not significant.
 
-To sum up, labor producivity is indeed correlated with the number of suppliers a firm has and also whether some of the buyers are from the same business group. There results underline that partner portfolios are related to performance and therefore being more successful in building such portfolios may generate a competitive advantage,
+To sum up, labor productivity is indeed correlated with the number of suppliers a firm has and also whether some of the buyers are from the same business group. There results underline that partner portfolios are related to performance and therefore being more successful in building such portfolios may generate a competitive advantage.
 
 %% can control for whether the firm is a member of a business group?
 \begin{table}[H]
     \caption{Labor productivity and supplier/buyer charateristics}
     \label{tab:prod_regs}
     \centerline{\input{tables/Table11.tex}}
-    {\scriptsize \textit{Notes:} The table shows OLS regressions when the dependent variable is ln(labor productivity). One observation is one respon- dent. Business group and for- eign refers to whether the firm has at least one such partner, while length is the average length of key relationships. Standard errors in parentheses$ *** p$<$0.01, ** p$<$0.05, * p$<$0.1 $}
+    {\scriptsize \textit{Notes:} The table shows OLS regressions when the dependent variable is ln(labor productivity). One observation is one respondent. Business group and foreign refers to whether the firm has at least one such partner, while length is the average length of key relationships. Standard errors in parentheses$ *** p$<$0.01, ** p$<$0.05, * p$<$0.1 $.}
 \end{table}
     
 
-
-
 \subsection{Starting relationships}
 
-After showing that performance is related to the number and type of buyers of the firm, it fundamental to ask how these relationships form, i.e. what firm can and should do to build a portfolio which can support high performance more effectivelly.
-
-\subsubsection{How relationships form}
+After showing that performance is related to the number and type of buyers of the firm, we ask how these relationships form. What can and should firms do to build a portfolio which can support high performance more effectively?
 
 In our questionnaire we asked about each key relationship how it was formed. Based on the answer to that question we can distinguish between (i) supplier initiated; (ii) buyer initiated; (iii) within groups and (iv) Other ways (including professional events). 
-
-
 
 Buyer and supplier-initiated relationships are similarly important. Network etc is relatively less important\\
 By country:
@@ -488,8 +474,6 @@ By country:
 
 
 %%%PUT these two figures into one please!
-
-\subsubsection{Innovation}
 
 \begin{itemize}
     \item Significant part of supplier relationships starts with innovation. Product and process innovation are complementary. Large country differences.
