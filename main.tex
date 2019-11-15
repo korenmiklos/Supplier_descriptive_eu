@@ -26,6 +26,7 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{multicol}
+\usepackage{makecell}
 
 \usepackage{changepage}
 
@@ -154,15 +155,30 @@ In the existing literature, relatively little is known about how linkages form b
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ Survey}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{How it started}
+\subsection{Setting up the survey}
 
-% todo gabor. 
+Doing a survey is difficult for many reasons: devsising the questionnaire, collecting data - doing the survey itself, and managing datasets.
 
-\begin{itemize}
-    \item Idea
-    \item Team: background, experience with firm data, surveys, microdata management
-    \item Choosing GFK as partner
-\end{itemize}{}
+First, formulating questions that can be reasonably answered and yet helps us get closer to research questions takes experimentation. To create a survey that works in more countries, required understanding some legal and accounting principals, too. To support our efforts, for our survey, we could build on earlier experience in international surveys -- we were partners and team leaders in EFIGE (\url{https://bruegel.org/publications/datasets/efige/}), one of the earliest and most successful survey projects on firms. 
+
+Second, we needed a partner to carry out the survey, decising the platform to collect answers, digitize them, and co-ordinate an array of poeple visiting firms. We decided to opt for this rather expensive approach in order to show our seriousness towards companies, hoping to get some facetime from senior management. Given the sensitive nature of some questions, gaining trust was essentual. 
+
+We set up an open call for companies with presence in our target countries, and after a two-round process, GfK emerged as winner. Their Budapest office won the contract co-ordinating data collection in Hungary, Slovakia and Romania using GfK's Slovakian and Romanian affiliates. 
+
+Finally, at CEU, we have a center for managaing microlevel datasets.
+
+%MIKLOS -  2 sentences here
+
+\subsection{computer assisted personal interview}
+We considered several options how to collect data. Eventually we opted for a computer assisted personal interview. Surveyors visited firms with a tablet where they could show questions and answer them. 
+
+Surveyors were appointed and trained by GfK, but we also gave a short talk to surveyors, and helped them understand questions. We had numerous calls with project managers from all countries. 
+
+Surveyors visited firms located in a given region of the country. This means there was no way to randomize surveyors across respondents. Fortunately, there was not much room for surveyor subjective interpretation, so this seemed less of a concern. 
+
+It is rather hard to check if surveyor features would effect results, actually. As regions and firms therin vary, replies to questions may vary across respondents. Furthermore, surveyors vary in experience and hence response time may vary for completely honest reasons, too. 
+% Miklos, anything else here
+% Gergo todo  - report some surveyor fixed effects?
 
 
 \subsection{Designing the survey instrument}
@@ -170,6 +186,7 @@ In the existing literature, relatively little is known about how linkages form b
 Although more and well detailed administrative datasets are available about companies, some concepts and organizational practices are still badly measured.\cite{Bloom2014-hc} One of them is the way firms form and maintain relationships. This topic is rarely analyzed with empirical techniques, even though it is potentially related to firm performance. Our survey focuses on supplier-buyer relations and analyzes how these choices influence the firms’ development.
 
 We first sketched all possible topics for the survey based on our review of the economics and business literature. 
+
 Some of the questions were original and some of them were imported from already existing surveys (e.g. from the EU standard Community Innovation Survey). It was clear from the beginning that the survey should be formulated in a way to maximize response rate. Therefore we discussed the methods and topics covered with colleagues from our survey partner and also with industry participants.
 
 Based on the expert judgment of our survey partner, we decided that the survey will last no longer than 45 minutes. Given the breadth of topics we wanted to include, this meant significantly length constraints on our questionnaire. The other important feedback we received reflected on the methodology. We decided to restrict the number of open ended questions and mainly included multiple choice or close ended (yes or no) questions. An important exception was asking the managers to briefly describe their firms, as this may contain useful information that helps to understand the context of their answers. These small bits of information capture the reasons behind altering answers. For example big changes can be explained by opening to foreign markets or the structure of partnerships can be better understood by knowing that the firm only buys from and produces to its parent company.
@@ -215,7 +232,7 @@ We selected firms for which basic financial information for 2012 and 2013 was av
 
 Our survey partner received basic identifying information for each firm in our sampling frame (name, industry, address of the headquarters), randomly ordered within each stratum. They were also given target numbers to reach, separately for each stratum. These targets implied oversampling of smaller hard-to-reach groups like large foreign firms. The size of the sample from the three participating countries were adjusted according to their population. Slovakia had 500 firms, Hungary had 600 firms and Romania had 700 firms.
 
-Table \ref{} reports the sampling probability for each stratum, calculated as the number of firms in the final sample divided by the number of such firms in the target population.
+%Table \ref{} reports the sampling probability for each stratum, calculated as the number of firms in the final sample divided by the number of such firms in the target population.
 
 % todo gergo: create this table. if you don't have original amadeus data used to create sampling frame, use sampling frame only and edit language "target population" -> "sampling frame".
 
@@ -223,63 +240,79 @@ Given our sampling frame, we could link our survey data with Amadeus, adding fin
 % TODO: Gergő check all numbers reported
 
 \subsection{Pilots}
+We started by visiting half a dozen companies and had conversations with CEOs to figure out what kind of questions may be asked and answered. This helped us design the first version of the questionnaire for the pilot phase. 
+
 We did 10 pilot studies in two rounds, testing two versions of questionnaire. We picked large companies as well as SMEs, domestically and foreign owned as well. Pilots were essential in deciding about the final version of the questions. Based on feedback from the pilot, we simplified some questions. For example, we merged several possible answers, as managers had a broad idea about the industry of the partner, but not much detail. We also added some explanations to questions and answers to make sure respondents understand the questions equally well. This was especially important for questions on innovation and learning. 
 
-\subsection{Questionnaire}
+\Section{Questionnaire}
 
-Some questions on all suppliers/buyers in a symmetric fashion. 
+In this section, let us present some key questions we asked. 
+
+First, some questions were similar to both suppliers and customers as reported in Table~\ref{tab:Q1}.
 
 %%%%%%%%%% TABLE Q1
-% TODO Gergo
-ADD: Table here with example questions
-basically two columns, Q for buyers and Q for suppliers, about 5-8 questions
-+ response rate for each q
+\begin{table}[H]
+\caption{Symmetric buyer/supplier questions}
+\label{tab:Q1}
+\centerline{
+    \input{tables/TableQ1.tex} 
+}
+{\scriptsize \textit{Source: Suppler Survey Questionnare Instrument. }}
+\end{table}
+
+Some of our questions were more sensitive asking about the relationship between respondent and their business partners. This where we focused on the nature of collaboration and types of products they trade. A few examples are shown in Table~\ref{tab:Q2} 
 
 %%%%%%%%%% TABLE Q2
 % TODO Gergo
-ADD: Table here with example questions
+\begin{table}[H]
+\caption{Detailed questions on the relationship}
+\label{tab:Q2}
+\centerline{
+    \input{tables/TableQ2.tex} 
+}
+{\scriptsize \textit{Source: Suppler Survey Questionnare Instrument.}}
+\end{table}
 
-More detailed question on a subset of suppliers/buyers 
 
-basically two columns, Q for buyers and Q for suppliers, about 4-5 questions
-+ response rate for each q
+Many of relationships were part of dealings in a multinational group, and we askes some basic questions about it, with examples in Table~\ref{tab:Q3}
 
 %%%%%%%%%% TABLE Q3
-% TODO Gergo
+
 ADD: Table here with example questions
+\begin{table}[H]
+\caption{Questions on high value machinery}
+\label{tab:Q3}
+\centerline{
+    \input{tables/TableQ3.tex} 
+}
+{\scriptsize \textit{Source: Suppler Survey Questionnare Instrument.}}
+\end{table}
 
-We also added questions asking about the supplier / buyer pool. 
-
-basically two columns, Q for buyers and Q for suppliers, about 2-4 questions
-+ response rate for each q
-
+Beyond buyers and suppliers, some of the questionnare was devoted to understanding high valued machinery use as shown in Table~\ref{tab:Q4}.
 
 %%%%%%%%%% TABLE Q4
-% TODO Gergo
+\begin{table}[H]
+\caption{Questions on high value machinery}
+\label{tab:Q4}
+\centerline{
+    \input{tables/TableQ4.tex} 
+}
+{\scriptsize \textit{Source: Suppler Survey Questionnare Instrument.}}
+\end{table}
 
-ADD table on machines
-column 1: questions similar to buyer/supplier
-column 2: machine specific questions
-+ response rate for each q
-
+Finally, we asked a few questions about the company itself, with some examples presented in Table~\ref{tab:Q5}
 
 %%%%%%%%%% TABLE Q5
 % TODO Gergo
-ADD table on general questions
-Questions on firms, like employment
-+ response rate for each q
+\begin{table}[H]
+\caption{Firm specific questions}
+\label{tab:Q5}
+\centerline{
+    \input{tables/TableQ5.tex} 
+}
+{\scriptsize \textit{Source: Suppler Survey Questionnare Instrument.}}
+\end{table}
 
-\subsection{Survey Method}
-% todo gabor
-
-computer assisted personal interview
-
-cannot randomize surveyors across respondents
-
-not as much room for surveyor subjective interpretation as in WMS
-
-% todo gergo
-report some surveyor fixed effects
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Data handling and cleaning}
@@ -317,7 +350,7 @@ Surveys were very consistent across countries. There were some issues to fix, in
     
     \item We checked if shares satisfied basic algebraic constraints, such as being less than 100\% and summing up to less than 100\%. While some shares could have been erroneous, we saw no patterns suggesting intervention.
     
-    \item We corrected every type of duplication based on partner information. The ``special'' buyer/supplier mentioned by the respondent was sometimes the same as the one already described as the most important one. We cleaned this by getting rid of duplicates. We used the key information on firms to find potential duplicates but also checked some cases by hand. This affected less than 5\% of observations.
+    \item We corrected every type of duplication based on partner information. The ``special'' buyer/supplier mentioned by the respondent was sometimes the same as one already described between the most important ones. We cleaned this by getting rid of duplicates. We used the key information on firms to find potential duplicates but also checked some cases by hand. This affected less than 5\% of observations.
     % TODO: Gergo check
 
 \end{enumerate}
@@ -503,7 +536,7 @@ By country:
 \begin{table}[h]
     \caption{Firm characteristics and relationship length (years)}
     \label{tab:char_length}    
-    \input{}
+    \input{tables/Table9a.tex}
 
     %% FIXME: Table 9a is not about length! 
 
