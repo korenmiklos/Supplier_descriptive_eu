@@ -4,7 +4,7 @@ classDiagram
 	class Respondent_Name
 	class Partner_Name
 
-	Partner "many" ..> "one" Respondent : supplier,buyer
+	Partner "many" ..> "one" Respondent
 	Respondent "one" .. "one" Respondent_Name
 	Partner "one" .. "one" Partner_Name
 
@@ -22,6 +22,7 @@ classDiagram
 	Partner_Name : EU VAT identifier
 	Partner_Name : (limited access, encrypted)
 
+	Partner : (buyer,supplier)
 	Partner : transaction size
 	Partner : length of relation
 	Partner : assistance
